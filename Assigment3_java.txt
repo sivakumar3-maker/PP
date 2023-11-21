@@ -1,0 +1,41 @@
+public class vehicle {
+    int doors, wheels, seats; String make, model;
+    vehicle(int t_doors, int t_wheels){
+        this.doors = t_doors;
+        this.wheels = t_wheels;
+    }
+    void setmake(String t_make){
+        make = t_make;
+    }
+    void setmodel(String t_model){
+        model = t_model;
+    }
+    void setseats(int t_seats){
+        this.seats = t_seats;
+    }
+    void getInfo(){
+        System.out.println("Make: " + make + ", Model: " + model + ", Doors: " + doors + ", Wheels: " + wheels +", seats: " + seats);
+    }
+}
+
+class flight extends vehicle{
+    flight(int d, int w){
+        super(d, w);
+    }
+}
+class boeing extends flight{
+    boeing(int d, int w, String t_make, String t_model, int t_seats){
+        super(d,w);
+        setmake(t_make);
+        setmodel(t_model);
+        setseats(t_seats);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        /*boeing  hyundaicar =new boeing(2,2,"hyundai","sonata",4);
+        hyundaicar.getInfo();*/
+        boeing myflight = new boeing(8,235,"Boeing","A222",485);
+        myflight.getInfo();
+            }
+}

@@ -1,0 +1,13 @@
+public class Prog3 {
+        static int increment(int y) {
+            y++;
+            return y;
+        }
+    }
+    class Main {
+            public static void main(String[] args) {
+            int x = 0;
+            x = Prog3.increment(10);
+            System.out.println(" Incremented x value  = " + x);
+        }
+    }

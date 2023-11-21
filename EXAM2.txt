@@ -1,0 +1,118 @@
+public class Human {
+    String name;
+    String Gender;
+    int age;
+    void setName(String uname){
+        name = uname;
+    }
+    void setAge(int uage){
+        age = uage;
+    }
+    void setGender(String uGender){
+        Gender = uGender;
+    }
+    void print(){
+        System.out.println(this.name + "," + this.age + ","+ this.Gender);
+    }
+}
+class main {
+    public static void main(String[] args) {
+        Human x[] = new Human[4];
+        x[0] = new Human();
+        x[0].setName("Robert Beck");
+        x[0].setAge(42);
+        x[0].setGender("M");
+
+        x[1] = new Human();
+        x[1].setName("Emma Waston");
+        x[1].setAge(35);
+        x[1].setGender("M");
+
+        x[2] = new Human();
+        x[2].setName("Jhon Robin");
+        x[2].setAge(55);
+        x[2].setGender("M");
+
+        x[3] = new Human();
+        x[3].setName("Tom Thomas");
+        x[3].setAge(72);
+        x[3].setGender("M");
+
+        x[0].print();
+        x[1].print();
+        x[2].print();
+        x[3].print();
+    }
+}
+
+Robert Beck,42,M
+Emma Waston,35,M
+Jhon Robin,55,M
+Tom Thomas,72,M
+
+Process finished with exit code 0
+
+
+
+
+public class Car {
+    String name;
+    int doors;
+    String color;
+    int mileage;
+    void setcolor(String t_color) {
+        color = t_color;
+    }
+    void setdoor(int t_doors) {
+        doors = t_doors;
+    }
+    void setName(String t_name) {
+        name = t_name;
+    }
+    void setmileage(int t_mileage) {
+        mileage = t_mileage;
+    }
+    void getName() {
+        System.out.println("name: " + this.name);
+    }
+    void getdoor() {
+        System.out.println("door: " + this.doors);
+    }
+    void getcolor() {
+        System.out.println("color: " + this.color);
+    }
+    void getmileage() {
+        System.out.println("mileage: " + this.mileage);
+    }
+}
+
+class Hyundai extends Car{
+    void setcar(Hyundai model, String t_name, String t_color, int t_door,int t_mileage){
+        model.setcolor(t_color);
+        model.setdoor(t_door);
+        model.setName(t_name);
+        model.setmileage(t_mileage);
+    }
+
+    void getcar (Hyundai model) {
+        model.getcolor();
+        model.getdoor();
+        model.getName();
+        model.getmileage();
+    }
+}
+class main{
+    public static void main(String[] args){
+        Hyundai sonata = new Hyundai();
+        sonata.setcar(sonata, "sonata sedan", "red", 4,10000);
+        sonata.getcar(sonata);
+    }
+}
+
+
+color: red
+door: 4
+name: sonata sedan
+mileage: 10000
+
+Process finished with exit code 0

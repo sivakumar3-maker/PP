@@ -1,0 +1,41 @@
+import java.util.Scanner;
+import javafx.geometry.Point2D;
+
+public class Skl {
+     public static void main(String[] args) {
+          Scanner input = new Scanner(System.in) ;
+
+          System.out.println("ENTER X1: ");
+          double x1 =input.nextDouble();
+
+          System.out.println("ENTER Y1: ");
+          double y1 =input.nextDouble();
+
+          System.out.println("ENTER X2: ");
+          double x2 =input.nextDouble();
+
+          System.out.println("ENTER Y2: ");
+          double y2 =input.nextDouble();
+
+          System.out.println("ENTER X3: ");
+          double x3 =input.nextDouble();
+
+          System.out.println("ENTER Y3: ");
+          double y3 =input.nextDouble();
+
+          Point2D P1 = new Point2D(x1, y1);
+          Point2D P2 = new Point2D(x2, y2);
+          Point2D P3 = new Point2D(x3, y3);
+
+          System.out.println("point#1 (p1): " + x1 + "," + y1);
+          System.out.println("point#2 (p2): " + x2 + "," + y2);
+          System.out.println("point#3 (p3): " + x3 + "," + y3);
+
+          System.out.println("Distance: " + P1.distance(P2));
+          System.out.println("Distance: " + P1.distance(P3));
+          System.out.println("Distance: " + P2.distance(P3));
+
+
+
+     }
+}
