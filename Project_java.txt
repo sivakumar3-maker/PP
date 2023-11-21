@@ -1,0 +1,56 @@
+public class TV {
+    int channel = 1;
+    int volumeLevel = 1;
+    boolean on = false;
+    public void turnOn() {
+        on = true;
+    }
+    public void turnOff() {
+        on = false;
+    }
+    public void setChannel(int newChannel) {
+        if (on && newChannel >= 1 && newChannel <= 120)
+            channel = newChannel;
+    }
+    public void setVolume(int newVolumeLevel) {
+        if (on && newVolumeLevel >= 1 && newVolumeLevel <= 12)
+            volumeLevel = newVolumeLevel;
+    }
+    public void channelUp() {
+        if (on && channel < 120)
+            channel++;
+    }
+    public void channeldown() {
+        if (on && channel > 120)
+            channel--;
+    }
+    public void volumeUp() {
+        if (on && volumeLevel < 12)
+            volumeLevel++;
+    }
+    public void volumedown() {
+        if (on && volumeLevel > 12)
+            volumeLevel--;
+    }
+    void getSettings(){
+        if(on){
+            System.out.println( "turnOn:" + on + "Channel: " + channel + " Volume: " + volumeLevel);
+        }
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        TV mytv = new TV();
+        mytv.turnOn();
+        mytv.channelUp();
+        //mytv.turnOff();
+        mytv.channeldown();
+        mytv.volumedown();
+        mytv.volumeUp();
+        mytv.setChannel(48);
+        mytv.setVolume(8);
+        mytv.getSettings();
+
+    }
+}
